@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/cart"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/txt_time_stamp"
+                android:layout_toEndOf="@id/imageView11"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_grey"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <ImageView
+                android:id="@+id/img_menu_popup"
+                android:layout_alignParentEnd="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_menu_popup"
+                app:tint="@color/blue_grey" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:background="@color/enable2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_list_active_order"
+            android:layout_width="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom= "15dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/view3"
+            android:background="@color/enable2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+        <TextView
+            android:id="@+id/txt_sum_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng thanh toán: $10"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:paddingVertical="12dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/blue_grey"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_review"
+            android:background="@drawable/btn_view_review_bg"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:paddingVertical="0dp"
+            android:textSize="12sp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Xem đánh giá"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

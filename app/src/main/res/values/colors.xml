@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red">#F75564</color>
+    <color name="blue_grey">#2E4058</color>
+    <color name="grey">#F5F5F5</color>
+    <color name="orange">#FFE4B5</color>
+
+    <color name="dark_grey">#4d4d4d</color>
+    <color name="grey_btn_enable">#D3D3D3</color>
+    <color name="text_enable">#808080</color>
+    <color name="payment_dark">#000000</color>
+    <color name="enable2">#A8A8A8</color>
+
+
+<!--    category-->
+    <color name="btn_1_bg">#A38FEC</color>
+    <color name="btn_2_bg">#7BC3D5</color>
+    <color name="btn_3_bg">#FC9D8B</color>
+    <color name="btn_4_bg">#5DCC92</color>
+    <color name="btn_5_bg">#EE71A8</color>
+    <color name="btn_6_bg">#92CEA4</color>
+    <color name="btn_7_bg">#DE70E0</color>
+    <color name="btn_8_bg">#9EAADD</color>
+
+
+</resources>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    tools:context=".activities.SettingProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="22dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/arrow"
+            app:tint="@color/blue_grey" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:textColor="@color/blue_grey"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/banner_food2" />
+
+        <TextView
+            android:id="@+id/txt_update_avatar"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/blue_grey"
+            android:layout_height="wrap_content"
+            android:text="Thay đổi ảnh"
+            app:drawableEndCompat="@drawable/ic_edit" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:textColor="@color/blue_grey"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_below="@id/textView10"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/blue_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vương Thiện Minh" />
+
+            <ImageView
+                android:id="@+id/img_extend1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_extend_setting" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_email"
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="5dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text11"
+                android:textColor="@color/blue_grey"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_below="@id/text11"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/blue_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="brunopham123@gmail.com" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_sex"
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text13"
+                android:textColor="@color/blue_grey"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giới tính" />
+
+            <TextView
+                android:id="@+id/txt_sex"
+                android:layout_below="@id/text13"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/blue_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam" />
+
+            <ImageView
+                android:id="@+id/img_extend4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_extend_setting" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_phone_number"
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text"
+                android:textColor="@color/blue_grey"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại" />
+
+            <TextView
+                android:id="@+id/txt_phone_number"
+                android:layout_below="@id/text"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/blue_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*******123" />
+
+            <ImageView
+                android:id="@+id/img_extend5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_extend_setting" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_password"
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text12"
+                android:textColor="@color/blue_grey"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mật khẩu" />
+
+            <TextView
+                android:id="@+id/txt_content_password"
+                android:layout_below="@id/text12"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/blue_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="********" />
+
+            <ImageView
+                android:id="@+id/img_extend3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_extend_setting" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

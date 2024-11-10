@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CompleteOrderFragment" >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_list_active_order"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/red"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/layout_notify_empty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_list_empty"
+            app:tint="@color/red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@id/img1"
+            android:layout_marginTop="60dp"
+            android:text="Danh sách rỗng!"
+            android:textColor="@color/dark_grey"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</RelativeLayout>

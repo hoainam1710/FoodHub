@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="15dp"
+    tools:context=".activities.AddShippingAddressActivity" >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/arrow"
+            app:tint="@color/blue_grey" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/blue_grey"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm địa chỉ nhận hàng" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/layout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_name"
+            android:layout_width="match_parent"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Họ và tên*" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_phone_number"
+            android:layout_width="match_parent"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:hint="Số điện thoại*"
+                tools:ignore="TextFields" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_thanh_pho"
+            android:layout_width="match_parent"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_thanh_pho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Tỉnh/Thành phố*" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_quan"
+            android:layout_width="match_parent"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_quan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Quận/Huyện*" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_phuong"
+            android:layout_width="match_parent"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_phuong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Phường/Xã*" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_so_nha"
+            android:layout_width="match_parent"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="5dp"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_so_nha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Tên đường, tòa nhà, số nhà*" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hoàn thành"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

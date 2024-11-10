@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_detail_order"
+        android:title="Chi tiết đơn hàng" />
+    <item
+        android:id="@+id/menu_cancel_order"
+        android:title="Hủy đặt hàng" />
+</menu>
