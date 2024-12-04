@@ -54,12 +54,15 @@
             android:layout_width="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
             android:drawablePadding="5dp"
             android:textColor="@color/blue_grey"
             android:layout_height="wrap_content"
             android:text="Thay đổi ảnh"
-            app:drawableEndCompat="@drawable/ic_edit" />
+            app:drawableEndCompat="@drawable/ic_edit"
+            app:drawableTint="@color/black" />
     </LinearLayout>
 
     <androidx.cardview.widget.CardView

@@ -39,8 +39,8 @@ public class ReauthenticateAccountActivity extends BaseActivity {
     }
 
     private void onClickSubmit() {
-        String emailCurrent = binding.edtEmail.getText().toString().trim();
-        String passwordCurrent = binding.edtPassword.getText().toString().trim();
+        String emailCurrent = Objects.requireNonNull(binding.edtEmail.getText()).toString().trim();
+        String passwordCurrent = Objects.requireNonNull(binding.edtPassword.getText()).toString().trim();
 
         if(ValidateStringUtils.validateEmail(emailCurrent, binding.layoutEmail)
         && ValidateStringUtils.validatePassword(passwordCurrent, binding.layoutPassword)){

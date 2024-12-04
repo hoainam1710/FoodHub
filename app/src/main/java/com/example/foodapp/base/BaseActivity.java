@@ -24,6 +24,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.red));
+//        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.grey));
 
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();

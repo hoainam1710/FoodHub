@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     app:cardCornerRadius="8dp"
     app:cardElevation="3dp"
+    android:translationZ="3dp"
     android:layout_marginTop="20dp"
     android:layout_marginEnd="20dp"
     android:layout_height="wrap_content">
@@ -145,9 +146,9 @@
                 </RelativeLayout>
             </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btn_submit"
-                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/red"
                 android:textColor="@color/white"
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"

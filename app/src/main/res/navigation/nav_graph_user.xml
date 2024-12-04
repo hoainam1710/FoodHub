@@ -17,9 +17,9 @@
         tools:layout="@layout/fragment_favorite" />
     <fragment
         android:id="@+id/contactFragment"
-        android:name="com.example.foodapp.fragments.ContactFragment"
+        android:name="com.example.foodapp.fragments.ChatUserFragment"
         android:label="fragment_contact"
-        tools:layout="@layout/fragment_contact" />
+        tools:layout="@layout/fragment_chat_user" />
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.foodapp.fragments.AccountFragment"

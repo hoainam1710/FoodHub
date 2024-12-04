@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_food2" />
+
+        <LinearLayout
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/img_avatar"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="40dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:textSize="14sp"
+                android:textColor="@color/blue_grey"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/enable2"/>
+
+    <LinearLayout
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_view_detail_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_icon2"
+                android:background="@drawable/bg_dialog_customer_manager_icon1"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_eye"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/blue_grey"
+                android:layout_toEndOf="@id/layout_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin tài khoản" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_delete_customer"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_icon1"
+                android:background="@drawable/bg_dialog_customer_manager_icon1"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_delete_2"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/blue_grey"
+                android:layout_toEndOf="@id/layout_icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xóa tài khoản" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

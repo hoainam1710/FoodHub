@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboardAdminFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Home" />
+    <item
+        android:id="@+id/chatAdminFragment"
+        android:icon="@drawable/ic_contact"
+        android:title="Chat" />
+    <item
+        android:id="@+id/accountAdminFragment"
+        android:icon="@drawable/ic_account"
+        android:title="Tài khoản" />
+</menu>

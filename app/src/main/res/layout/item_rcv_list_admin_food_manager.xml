@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    android:translationZ="3dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_food"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/banner_food2" />
+
+        <TextView
+            android:id="@+id/txt_name_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_food"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/blue_grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_category"
+            android:textSize="14sp"
+            android:textColor="@color/dark_grey"
+            android:layout_below="@id/txt_name_food"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <RelativeLayout
+            android:layout_marginHorizontal="15dp"
+            android:layout_below="@id/txt_category"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_detail"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:background="@drawable/bg_detail_food_manager"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/img16"
+                    android:layout_centerInParent="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_eye"
+                    app:tint="@color/dark_green" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layout_edit"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:background="@drawable/bg_edit_food_manager"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_centerInParent="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_edit"
+                    app:tint="@color/red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_delete"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:background="@drawable/bg_delete_food_manager"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_centerInParent="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_remove2"
+                    app:tint="#3F51B5" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

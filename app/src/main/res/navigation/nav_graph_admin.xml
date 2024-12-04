@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_admin"
+    app:startDestination="@id/dashboardAdminFragment">
+
+    <fragment
+        android:id="@+id/dashboardAdminFragment"
+        android:name="com.example.foodapp.fragments.DashboardAdminFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard_admin" />
+    <fragment
+        android:id="@+id/chatAdminFragment"
+        android:name="com.example.foodapp.fragments.ChatAdminFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat_admin" />
+    <fragment
+        android:id="@+id/accountAdminFragment"
+        android:name="com.example.foodapp.fragments.AccountAdminFragment"
+        android:label="Tài khoản"
+        tools:layout="@layout/fragment_account_admin" />
+    <fragment
+        android:id="@+id/orderManagerFragment"
+        android:name="com.example.foodapp.fragments.OrderManagerFragment"
+        android:label="Quản lý đơn hàng"
+        tools:layout="@layout/fragment_order_manager" />
+    <fragment
+        android:id="@+id/customerManagerFragment"
+        android:name="com.example.foodapp.fragments.CustomerManagerFragment"
+        android:label="Quản lý người dùng"
+        tools:layout="@layout/fragment_customer_manager" />
+    <fragment
+        android:id="@+id/reviewManagerFragment"
+        android:name="com.example.foodapp.fragments.ReviewManagerFragment"
+        android:label="Quản lý đánh giá"
+        tools:layout="@layout/fragment_review_manager" />
+    <fragment
+        android:id="@+id/categoryManagerFragment"
+        android:name="com.example.foodapp.fragments.CategoryManagerFragment"
+        android:label="Thống kê doanh thu"
+        tools:layout="@layout/fragment_category_manager" />
+    <fragment
+        android:id="@+id/foodManagerFragment"
+        android:name="com.example.foodapp.fragments.FoodManagerFragment"
+        android:label="Quản lý món ăn"
+        tools:layout="@layout/fragment_food_manager" />
+</navigation>

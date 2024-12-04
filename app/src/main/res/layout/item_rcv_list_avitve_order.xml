@@ -6,6 +6,7 @@
     android:layout_marginTop="20dp"
     android:layout_marginEnd="20dp"
     app:cardElevation="3dp"
+    android:translationZ="3dp"
     app:cardCornerRadius="8dp"
     android:layout_height="wrap_content">
 
@@ -91,7 +92,9 @@
             android:layout_gravity="end"
             android:layout_marginEnd="15dp"
             android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:layout_height="35dp"
             android:text="Xem đánh giá"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

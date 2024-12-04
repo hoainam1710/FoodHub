@@ -297,10 +297,10 @@
                     android:layout_height="wrap_content" >
 
                     <RelativeLayout
-                        android:paddingTop="10dp"
-                        android:paddingHorizontal="20dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingTop="10dp">
 
                         <ImageView
                             android:id="@+id/imageView2"
@@ -311,14 +311,14 @@
 
                         <TextView
                             android:id="@+id/txt_card_number"
-                            android:textColor="@android:color/white"
-                            android:layout_toEndOf="@id/imageView2"
-                            android:layout_centerVertical="true"
-                            android:textSize="18sp"
-                            android:layout_marginStart="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="**** **** **** XXXX" />
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@id/imageView2"
+                            android:text="**** **** **** XXXX"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
 
 
                     </RelativeLayout>
@@ -571,13 +571,13 @@
         android:background="@color/grey"
         android:paddingHorizontal="15dp">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_review"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/red"
             android:text="Đánh giá"
             android:textColor="@color/white"
             android:textSize="14sp" />

@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:scaleType="centerCrop"
-        app:riv_corner_radius="5dp"
-        android:elevation="8dp"
+        app:riv_corner_radius="3dp"
+        android:elevation="3dp"
         android:src="@drawable/banner_food2" />
 
 </RelativeLayout>

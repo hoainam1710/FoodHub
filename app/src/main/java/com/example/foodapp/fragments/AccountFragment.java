@@ -116,8 +116,10 @@ public class AccountFragment extends BaseFragment {
                                     .load(R.drawable.avatar_default)
                                     .into(binding.imgAvatar);
 
-                            if(name == null){
-                                binding.txtName.setText("Người dùng mới");
+                            if(name == null || name.isEmpty()){
+                                String id = user.getId();
+                                String subId = id.substring(id.length()-6);
+                                binding.txtName.setText("User_"+ subId);
                             } else binding.txtName.setText(name);
                         }
                     }

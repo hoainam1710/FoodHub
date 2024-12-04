@@ -7,18 +7,12 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.foodapp.R;
 import com.example.foodapp.base.BaseActivity;
 import com.example.foodapp.databinding.ActivitySettingPhoneNumberBinding;
 import com.example.foodapp.utils.ValidateStringUtils;
-import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
@@ -26,6 +20,10 @@ public class SettingPhoneNumberActivity extends BaseActivity {
     private ActivitySettingPhoneNumberBinding binding;
     private ProgressDialog progressDialog;
     private String oldPhoneNumber = "";
+    public static final int ADMIN_TYPE = 0;
+    public static final int USER_TYPE = 1;
+    private int checkType = USER_TYPE;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +32,7 @@ public class SettingPhoneNumberActivity extends BaseActivity {
         setContentView(binding.getRoot());
 
         initProgressDialog();
+        setUiDefault();
         getResultIntent();
         setOnTextChange();
         initListener();
@@ -47,13 +46,24 @@ public class SettingPhoneNumberActivity extends BaseActivity {
     }
     private void getResultIntent() {
         Intent intent = getIntent();
+        if(intent == null){
+            return;
+        }
         oldPhoneNumber = intent.getStringExtra("phoneNumber");
-        binding.txtSave.setEnabled(false);
-        binding.txtSave.setTextColor(ContextCompat.getColor(this, R.color.grey_btn_enable));
         if(oldPhoneNumber != null){
             binding.edtPhoneNumber.setText(oldPhoneNumber);
-        }
+        } else binding.edtPhoneNumber.setText("");
 
+        String type = intent.getStringExtra("checkFrom");
+        if(type != null && type.equals("user")){
+            checkType = USER_TYPE;
+        } else checkType = ADMIN_TYPE;
+
+    }
+
+    private void setUiDefault(){
+        binding.txtSave.setEnabled(false);
+        binding.txtSave.setTextColor(ContextCompat.getColor(this, R.color.grey_btn_enable));
     }
 
     private void initListener() {
@@ -62,18 +72,37 @@ public class SettingPhoneNumberActivity extends BaseActivity {
             String newPhoneNumber = Objects.requireNonNull(binding.edtPhoneNumber.getText()).toString().trim();
             if(ValidateStringUtils.validatePhoneNumber(binding.layoutPhoneNumber, newPhoneNumber)){
                 progressDialog.show();
-                database.getReference("Account").child(getUid()).child("profile")
-                        .child("phoneNumber").setValue(newPhoneNumber)
-                        .addOnCompleteListener(task -> {
-                            progressDialog.dismiss();
-                            if(task.isSuccessful()){
-                                Toast.makeText(SettingPhoneNumberActivity.this, "Lưu số điện thoại thành công", Toast.LENGTH_SHORT).show();
-                                finish();
-                            } else
-                                Toast.makeText(SettingPhoneNumberActivity.this, "Lưu số điện thoại thất bại", Toast.LENGTH_SHORT).show();
-                        });
+                if(checkType == USER_TYPE){
+                    savePhoneNumberUser(newPhoneNumber);
+                } else savePhoneNumberAdmin(newPhoneNumber);
             }
         });
+    }
+
+    private void savePhoneNumberAdmin(String newPhoneNumber) {
+        database.getReference("Admin").child(getUid())
+                .child("phoneNumber").setValue(newPhoneNumber)
+                .addOnCompleteListener(task -> {
+                    progressDialog.dismiss();
+                    if(task.isSuccessful()){
+                        Toast.makeText(SettingPhoneNumberActivity.this, "Lưu số điện thoại thành công", Toast.LENGTH_SHORT).show();
+                        finish();
+                    } else
+                        Toast.makeText(SettingPhoneNumberActivity.this, "Lưu số điện thoại thất bại", Toast.LENGTH_SHORT).show();
+                });
+    }
+
+    private void savePhoneNumberUser(String newPhoneNumber){
+        database.getReference("Account").child(getUid()).child("profile")
+                .child("phoneNumber").setValue(newPhoneNumber)
+                .addOnCompleteListener(task -> {
+                    progressDialog.dismiss();
+                    if(task.isSuccessful()){
+                        Toast.makeText(SettingPhoneNumberActivity.this, "Lưu số điện thoại thành công", Toast.LENGTH_SHORT).show();
+                        finish();
+                    } else
+                        Toast.makeText(SettingPhoneNumberActivity.this, "Lưu số điện thoại thất bại", Toast.LENGTH_SHORT).show();
+                });
     }
 
 

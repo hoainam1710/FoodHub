@@ -5,31 +5,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.foodapp.R;
 import com.example.foodapp.base.BaseActivity;
 import com.example.foodapp.databinding.ActivityUpdatePasswordBinding;
 import com.example.foodapp.utils.ValidateStringUtils;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
 public class UpdatePasswordActivity extends BaseActivity {
     private ActivityUpdatePasswordBinding binding;
     private ProgressDialog progressDialog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +37,6 @@ public class UpdatePasswordActivity extends BaseActivity {
         progressDialog.setMessage("Đang lưu...");
         progressDialog.setCanceledOnTouchOutside(false);
     }
-
 
     private void initListener() {
         binding.txtCancel.setOnClickListener(v -> {

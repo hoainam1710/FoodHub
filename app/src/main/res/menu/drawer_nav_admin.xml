@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/orderManagerFragment"
+            android:icon="@drawable/ic_order_manager"
+            android:title="Quản lý đơn hàng" />
+        <item
+            android:id="@+id/customerManagerFragment"
+            android:icon="@drawable/ic_account"
+            android:title="Quản lý người dùng" />
+
+        <item
+            android:id="@+id/foodManagerFragment"
+            android:icon="@drawable/ic_food_manager"
+            android:title="Quản lý món ăn" />
+        <item
+            android:id="@+id/reviewManagerFragment"
+            android:icon="@drawable/ic_menu_review"
+            android:title="Quản lý đánh giá" />
+
+        <item
+            android:id="@+id/categoryManagerFragment"
+            android:icon="@drawable/ic_category_manager"
+            android:title="Thống kê doanh thu" />
+    </group>
+
+    <item tools:ignore="MenuTitle">
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Đăng xuất" />
+        </menu>
+    </item>
+</menu>

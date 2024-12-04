@@ -3,16 +3,15 @@ package com.example.foodapp.fragments;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.foodapp.R;
 import com.example.foodapp.activities.CartActivity;
@@ -27,8 +26,8 @@ import com.example.foodapp.base.BaseFragment;
 import com.example.foodapp.databinding.FragmentHomeUserBinding;
 import com.example.foodapp.model.Category;
 import com.example.foodapp.model.Food;
-import com.example.foodapp.utils.DepthPageTransformer;
 import com.example.foodapp.model.Location;
+import com.example.foodapp.utils.DepthPageTransformer;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

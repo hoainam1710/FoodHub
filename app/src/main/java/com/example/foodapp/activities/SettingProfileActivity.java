@@ -11,11 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
-
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
-
 
 import com.bumptech.glide.Glide;
 import com.example.foodapp.R;
@@ -70,6 +68,7 @@ public class SettingProfileActivity extends BaseActivity {
     private void onClickSettingPhoneNumber() {
         Intent intent = new Intent(this, SettingPhoneNumberActivity.class);
         intent.putExtra("phoneNumber", userCurrent.getPhoneNumber());
+        intent.putExtra("checkFrom", "user");
         startActivity(intent);
     }
 
@@ -111,6 +110,7 @@ public class SettingProfileActivity extends BaseActivity {
     private void getUserFromRealtime() {
         database.getReference("Account").child(getUid()).child("profile")
                 .addValueEventListener(new ValueEventListener() {
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.exists()){
@@ -129,9 +129,14 @@ public class SettingProfileActivity extends BaseActivity {
                                 String lastPhoneNumber = phoneNumber.substring(7);
                                 hidePhoneNumber = "*******"+ lastPhoneNumber;
                             }
-
                             setInformation(binding.txtPhoneNumber, hidePhoneNumber);
-                            setInformation(binding.txtName, name);
+
+                            if(name == null || name.isEmpty()){
+                                String id = userCurrent.getId();
+                                String subId = id.substring(id.length()-6);
+                                binding.txtName.setText("User_"+ subId);
+                            } else binding.txtName.setText(name);
+//                            setInformation(binding.txtName, name);
                             setInformation(binding.txtEmail, email);
                             setInformation(binding.txtSex, sex);
 

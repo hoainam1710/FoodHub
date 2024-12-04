@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    tools:context=".fragments.FoodManagerFragment" >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginHorizontal="15dp"
+        android:id="@+id/layout_search"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:errorEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:inputType="text"
+            android:textColor="@color/blue_grey"
+            android:imeOptions="actionSearch"
+            android:textSize="14sp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/bg_edt_search"
+            android:drawableTint="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColorHint="@color/dark_grey"
+            android:hint="Tìm kiếm món ăn..." />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_list_food"
+        android:layout_marginEnd="15dp"
+        android:scrollbars="none"
+        android:layout_below="@id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/red"
+        android:layout_centerInParent="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:translationZ="3dp"
+        android:elevation="3dp"
+        android:backgroundTint="@color/light_red"
+        android:clickable="true"
+        android:src="@drawable/ic_plus"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

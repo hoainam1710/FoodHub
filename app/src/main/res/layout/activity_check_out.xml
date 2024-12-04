@@ -539,13 +539,13 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/txt_label_total"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_order"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/red"
             android:text="Đặt hàng"
             android:textColor="@color/white"
             android:textSize="14sp" />

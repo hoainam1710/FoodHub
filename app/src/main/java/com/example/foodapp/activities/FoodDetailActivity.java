@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -291,7 +292,7 @@ public class FoodDetailActivity extends BaseActivity implements ListCompletedRev
 
 
     @SuppressLint("SetTextI18n")
-    private void setEnableButton(AppCompatButton button){
+    private void setEnableButton(Button button){
         button.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.btn_enable_bg));
         button.setText("Đã thêm vào giỏ hàng");
         button.setTextColor(ContextCompat.getColor(this,R.color.text_enable));

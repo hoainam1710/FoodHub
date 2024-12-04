@@ -288,7 +288,7 @@
                         android:layout_marginEnd="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.5/5" />
+                        android:text="5/5" />
 
                     <TextView
                         android:id="@+id/txt_number_review"
@@ -298,7 +298,7 @@
                         android:textSize="14sp"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@id/txt_rating"
-                        android:text="(100 review)" />
+                        android:text="(0 review)" />
 
                 </RelativeLayout>
 
@@ -359,9 +359,9 @@
 
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_add_to_cart"
-            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/red"
             android:layout_width="wrap_content"
             android:paddingHorizontal="12dp"
             android:drawableStart="@drawable/cart"
@@ -369,7 +369,6 @@
             android:layout_centerVertical="true"
             android:textColor="@color/white"
             android:textSize="12sp"
-
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:text="Thêm vào giỏ hàng"/>
